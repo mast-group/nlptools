@@ -12,7 +12,7 @@ import nlptools.lexicalization.WordTokenRetriever;
 import org.apache.commons.io.FileUtils;
 
 /**
- * @author "Miltos Allamanis <m.allamanis@ed.ac.uk>"
+ * @author Miltos Allamanis <m.allamanis@ed.ac.uk>
  * 
  */
 public class NLTokenizerTUI {
