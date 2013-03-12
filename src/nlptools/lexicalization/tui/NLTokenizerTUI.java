@@ -19,9 +19,9 @@ public class NLTokenizerTUI {
 
 	/**
 	 * @param args
-	 * @throws IOException
+	 * @throws Exception
 	 */
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		if (args.length != 2) {
 			System.err.println("Usage <filepath> tokens|keyphrases");
 			return;

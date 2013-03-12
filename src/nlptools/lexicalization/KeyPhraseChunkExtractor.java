@@ -39,7 +39,7 @@ public class KeyPhraseChunkExtractor {
 	public final String[] nonChars = { "/", "\\", "<", ">", ".", ":", "(", ")",
 			"#" };
 
-	public KeyPhraseChunkExtractor() throws InvalidFormatException, IOException {
+	public KeyPhraseChunkExtractor() throws Exception, IOException {
 
 		InputStream modelIn = getClass().getResourceAsStream(
 				"/nlptools/data/en-pos-maxent.bin");
