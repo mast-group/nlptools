@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ir.lexicalization;
+package nlptools.lexicalization;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import org.tartarus.snowball.ext.englishStemmer;
  */
 
 /**
- * @author "Miltos Allamanis <m.allamanis@ed.ac.uk>"
+ * @author Miltos Allamanis <m.allamanis@ed.ac.uk>
  * 
  */
 public class WordTokenRetriever {
@@ -48,7 +48,7 @@ public class WordTokenRetriever {
 	 * @param text
 	 * @return
 	 */
-	public List<String> getWordsFrom(final String text) {
+	public List<String> getTokensFrom(final String text) {
 		final List<String> words = new ArrayList<String>();
 		final String[] bodyTokens = nlTokenizer.tokenize(text);
 		for (final String word : bodyTokens) {

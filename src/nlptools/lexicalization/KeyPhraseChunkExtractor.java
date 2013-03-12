@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uk.ac.ed.inf.ir.lexicalization;
+package nlptools.lexicalization;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -24,7 +24,7 @@ import opennlp.tools.util.Span;
 import org.tartarus.snowball.ext.englishStemmer;
 
 /**
- * @author "Miltos Allamanis <m.allamanis@ed.ac.uk>"
+ * @author Miltos Allamanis <m.allamanis@ed.ac.uk>
  * 
  */
 public class KeyPhraseChunkExtractor {
