@@ -1,6 +1,5 @@
 package nlptools.lexicalization;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -36,8 +35,8 @@ public class WordTokenRetriever {
 	final englishStemmer stemmer = new englishStemmer();
 
 	public WordTokenRetriever() throws InvalidFormatException, IOException {
-		final InputStream modelIn = new FileInputStream(
-				"/home/miltiadis/workspace/MSRChallenge/deps/en-token.bin"); // TODO
+		final InputStream modelIn = getClass().getResourceAsStream(
+				"/nlptools/data/en-token.bin");
 		nlTokenizerModel = new TokenizerModel(modelIn);
 		nlTokenizer = new TokenizerME(nlTokenizerModel);
 	}
