@@ -9,7 +9,6 @@ import java.util.List;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
-import opennlp.tools.util.InvalidFormatException;
 
 import org.tartarus.snowball.ext.englishStemmer;
 
@@ -34,7 +33,7 @@ public class WordTokenRetriever {
 	final Tokenizer nlTokenizer;
 	final englishStemmer stemmer = new englishStemmer();
 
-	public WordTokenRetriever() throws InvalidFormatException, IOException {
+	public WordTokenRetriever() throws Exception, IOException {
 		final InputStream modelIn = getClass().getResourceAsStream(
 				"/nlptools/data/en-token.bin");
 		nlTokenizerModel = new TokenizerModel(modelIn);
