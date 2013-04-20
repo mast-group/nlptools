@@ -4,7 +4,6 @@
 package nlptools.lexicalization.tui;
 
 import java.io.File;
-import java.io.IOException;
 
 import nlptools.lexicalization.KeyPhraseChunkExtractor;
 import nlptools.lexicalization.WordTokenRetriever;

@@ -14,14 +14,17 @@ public class SnowballProgram {
 
 	protected int bra;
 	protected int ket;
+
 	protected SnowballProgram() {
 		current = new StringBuffer();
 		setCurrent("");
 	}
+
 	protected StringBuffer assign_to(StringBuffer s) {
 		s.replace(0, s.length(), current.substring(0, limit));
 		return s;
 	}
+
 	protected StringBuilder assign_to(StringBuilder s) {
 		s.replace(0, s.length(), current.substring(0, limit));
 		return s;

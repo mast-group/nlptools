@@ -77,10 +77,12 @@ public class norwegianStemmer extends org.tartarus.snowball.SnowballStemmer {
 		super.copy_from(other);
 	}
 
+	@Override
 	public boolean equals(Object o) {
 		return o instanceof norwegianStemmer;
 	}
 
+	@Override
 	public int hashCode() {
 		return norwegianStemmer.class.getName().hashCode();
 	}
@@ -296,6 +298,7 @@ public class norwegianStemmer extends org.tartarus.snowball.SnowballStemmer {
 		return true;
 	}
 
+	@Override
 	public boolean stem() {
 		int v_1;
 		int v_2;

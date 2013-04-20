@@ -17,7 +17,6 @@ import opennlp.tools.postag.POSTaggerME;
 import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
-import opennlp.tools.util.InvalidFormatException;
 import opennlp.tools.util.Span;
 
 import org.tartarus.snowball.ext.englishStemmer;
