@@ -2,7 +2,6 @@ package nlptools.lexicalization;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,6 +10,8 @@ import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
 import org.tartarus.snowball.ext.englishStemmer;
+
+import com.google.common.collect.Lists;
 
 /**
  * 
@@ -47,7 +48,7 @@ public class WordTokenRetriever {
 	 * @return
 	 */
 	public List<String> getTokensFrom(final String text) {
-		final List<String> words = new ArrayList<String>();
+		final List<String> words = Lists.newArrayList();
 		final String[] bodyTokens = nlTokenizer.tokenize(text);
 		for (final String word : bodyTokens) {
 			if (isStopWord(word)) {

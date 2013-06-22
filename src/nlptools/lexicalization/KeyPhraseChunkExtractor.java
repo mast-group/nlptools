@@ -7,7 +7,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import opennlp.tools.chunker.ChunkerME;
@@ -20,6 +19,8 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 
 import org.tartarus.snowball.ext.englishStemmer;
+
+import com.google.common.collect.Lists;
 
 /**
  * @author Miltos Allamanis <m.allamanis@ed.ac.uk>
@@ -64,7 +65,7 @@ public class KeyPhraseChunkExtractor {
 		String tags[] = tagger.tag(toks);
 
 		final Span chunkSpan[] = chunker.chunkAsSpans(toks, tags);
-		final List<String> chunks = new ArrayList<String>();
+		final List<String> chunks = Lists.newArrayList();
 		for (final Span s : chunkSpan) {
 			if (s.getType().equals("NP"))
 				continue;
