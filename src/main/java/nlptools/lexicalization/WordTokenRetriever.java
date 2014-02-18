@@ -36,7 +36,7 @@ public class WordTokenRetriever {
 
 	public WordTokenRetriever() throws Exception, IOException {
 		final InputStream modelIn = getClass().getResourceAsStream(
-				"/nlptools/data/en-token.bin");
+				"/nlpmodels/nlptools/data/en-token.bin");
 		nlTokenizerModel = new TokenizerModel(modelIn);
 		nlTokenizer = new TokenizerME(nlTokenizerModel);
 	}
@@ -74,12 +74,14 @@ public class WordTokenRetriever {
 	 * @return
 	 */
 	private boolean isStopWord(final String word) {
-		if (stopwords.contains(word))
+		if (stopwords.contains(word)) {
 			return true;
+		}
 
 		for (final String spec : spChar) {
-			if (word.contains(spec))
+			if (word.contains(spec)) {
 				return true;
+			}
 		}
 		return false;
 	}
