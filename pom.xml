@@ -1,16 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <parent>
-        <groupId>codemining</groupId>
-        <artifactId>codemining-all</artifactId>
-        <version>1.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-  </parent>
-
 
   <modelVersion>4.0.0</modelVersion>
+  <groupId>codemining</groupId>
   <artifactId>nlptools</artifactId>
+  <version>1.1-SNAPSHOT</version>
   <name>NLP Tools</name>
   <packaging>jar</packaging>
+
+  <properties>
+    <findbugs.version>3.0.0</findbugs.version>
+    <checkstyle.version>5.7</checkstyle.version>
+    <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
+    <cobertura.version>2.5.2</cobertura.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <build>
         <pluginManagement>
